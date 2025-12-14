@@ -135,10 +135,6 @@ public class Player {
     // --------------------------------------------------------------------------------------------------------------------------------------------
 
     // Methods
-    // Add a nickname
-    public void addNickname(String nn) {
-        nicknames.add(nn);
-    }
 
     // Update statistics after playing a game
     public void playedGame(boolean win, int total) {
@@ -162,6 +158,8 @@ public class Player {
     public int getGameTotal (){return gameTotal;}
 
     // Setters
+    // Add a nickname
+    public void addNickname(String nn) { nicknames.add(nn); }
     public void changeName(String newName) { name = newName; }
     public void setGameScores(int w, int c, int won, int civ, int com, int g, int s) {
         war = w;

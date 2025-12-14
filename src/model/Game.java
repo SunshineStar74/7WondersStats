@@ -12,5 +12,31 @@ package src.model;
 import java.util.*;
 
 public class Game {
-    
+    private int games = 0;
+    private final int gameNumber;
+    private final ArrayList<Player> players;
+
+    public Game(int num, int numPlayers) {
+        gameNumber = num;
+        games++;
+        players = new ArrayList<>(numPlayers);
+        System.out.println("Game #" + num + " created with " + numPlayers + " players.");
+    }
+
+    // Methods
+    // Setters
+    public void addPlayer(Player p) { players.add(p);}
+
+    // Getters
+    public ArrayList<Player> getPlayers() { return players; }
+    public int getGameNumber() { return gameNumber; }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Game #" + gameNumber + ":\n");
+        for (Player p : players) {
+            sb.append(p.toString()).append(" - ").append(p.getGameTotal()).append(" points\n");
+        }
+        return sb.toString();
+    }
 }
