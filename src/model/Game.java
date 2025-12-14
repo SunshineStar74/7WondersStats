@@ -1,4 +1,4 @@
-package src.model;
+package model;
 // 7 Wonders Stats
 // Game.java
 // Aldo Saenz
