@@ -8,14 +8,17 @@ package model;
 //              Includes game attributes, constructors, and methods to manage game statistics.
 // --------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+// Imports
 import java.util.ArrayList;
 
 public class Game {
+    // Attributes
     private int games = 0;
     private final int gameNumber;
     private final ArrayList<Player> players;
+    // -----------------------------------------------------------------------------------------------------------------------------------------------
 
+    // Constructors
     public Game(int num, int numPlayers) {
         gameNumber = num;
         games++;
@@ -26,11 +29,14 @@ public class Game {
     // Methods
     // Setters
     public void addPlayer(Player p) { players.add(p);}
+    public void setGameCount(int count) { games = count; }
 
     // Getters
     public ArrayList<Player> getPlayers() { return players; }
     public int getGameNumber() { return gameNumber; }
+    public int getGameCount() { return games; }
 
+    // Print game details
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Game #" + gameNumber + ":\n");
