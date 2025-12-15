@@ -161,6 +161,7 @@ public class Player {
     // Add a nickname
     public void addNickname(String nn) { nicknames.add(nn); }
     public void changeName(String newName) { name = newName; }
+    public void setNicknames(ArrayList<String> n) { nicknames = n; }
     public void setGameScores(int w, int c, int won, int civ, int com, int g, int s) {
         war = w;
         coins = c;
@@ -176,5 +177,5 @@ public class Player {
 
     // Print player name
     @Override
-    public String toString (){return name;}
+    public String toString (){return name;}    
 }
