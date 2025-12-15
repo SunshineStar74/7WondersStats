@@ -11,7 +11,7 @@ package model;
 
 
 // Imports
-import java.util.*;
+import java.util.ArrayList;
 
 public class Player {
     // Attributes

@@ -1,6 +1,6 @@
 package app;
 
-import java.awt.*;
+/*import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 import javax.swing.JButton;
@@ -10,11 +10,28 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
-import model.Game;
-import model.Player;
+*/
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
-public class SevenWondersStats {
-    private static final ArrayList<Game> allGames = new ArrayList<>();
+public class SevenWondersStats extends Application {
+
+    @Override
+    public void start(Stage stage) {
+        Label label = new Label("Seven Wonders Stats");
+        Scene scene = new Scene(label, 400, 300);
+
+        stage.setScene(scene);
+        stage.setTitle("Seven Wonders");
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+    /*private static final ArrayList<Game> allGames = new ArrayList<>();
     
     public static void main (String[] args){
         SwingUtilities.invokeLater(() -> {
@@ -55,6 +72,7 @@ public class SevenWondersStats {
         }
 
         return panel;
+        
     }
 
     private static void createNewGame(JFrame frame) {
@@ -119,6 +137,5 @@ public class SevenWondersStats {
             JOptionPane.showMessageDialog(null, "Error loading games: " + e.getMessage());
         }
     }
-
+*/
 }
-

@@ -9,7 +9,7 @@ package model;
 // --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Game {
     private int games = 0;
