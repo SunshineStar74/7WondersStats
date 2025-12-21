@@ -33,9 +33,9 @@ public class Player {
     private int commercial;
     private int guilds;
     private int scientific;
-
     // Total score for the current game
     private int gameTotal;
+
     // --------------------------------------------------------------------------------------------------------------------------------------------
 
     // Constructors
@@ -132,10 +132,10 @@ public class Player {
         this.highestScore = this.gameTotal;  // Initially, first score is highest
         System.out.println("New High Score: " + this.highestScore);
     }
+
     // --------------------------------------------------------------------------------------------------------------------------------------------
 
     // Methods
-
     // Update statistics after playing a game
     public void playedGame(boolean win, int total) {
         numGames++;
@@ -158,7 +158,6 @@ public class Player {
     public int getGameTotal (){return gameTotal;}
 
     // Setters
-    // Add a nickname
     public void addNickname(String nn) { nicknames.add(nn); }
     public void changeName(String newName) { name = newName; }
     public void setNicknames(ArrayList<String> n) { nicknames = n; }
