@@ -1,4 +1,3 @@
-package app;
 // 7 Wonders Stats
 // Player.java
 // Aldo Saenz
@@ -6,6 +5,7 @@ package app;
 // Updated: Dedember 21, 2025
 // Description: This is the main class for the 7 Wonders Stats application. It sets up the JavaFX application and initializes the user interface.
 // --------------------------------------------------------------------------------------------------------------------------------------------------
+package app;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

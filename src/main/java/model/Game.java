@@ -1,4 +1,3 @@
-package model;
 // 7 Wonders Stats
 // Game.java
 // Aldo Saenz
@@ -7,6 +6,7 @@ package model;
 // Description: Class representing a game from the 7 Wonders board game for a statistics application.
 //              Includes game attributes, constructors, and methods to manage games.
 // --------------------------------------------------------------------------------------------------------------------------------------------------
+package model;
 
 // Imports
 import java.util.HashMap;

@@ -1,4 +1,3 @@
-package model;
 // 7 Wonders Stats
 // Player.java
 // Aldo Saenz
@@ -7,8 +6,7 @@ package model;
 // Description: Class representing a player in the 7 Wonders board game for a statistics application.
 //              Includes player attributes, constructors, and methods to manage player statistics.
 // --------------------------------------------------------------------------------------------------------------------------------------------------
-
-
+package model;
 
 // Imports
 import java.util.ArrayList;
