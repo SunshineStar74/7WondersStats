@@ -3,7 +3,7 @@ package model;
 // Player.java
 // Aldo Saenz
 // Created: Dedember 13, 2025
-// Updated: Dedember 14, 2025
+// Updated: Dedember 21, 2025
 // Description: Class representing a player in the 7 Wonders board game for a statistics application.
 //              Includes player attributes, constructors, and methods to manage player statistics.
 // --------------------------------------------------------------------------------------------------------------------------------------------------
