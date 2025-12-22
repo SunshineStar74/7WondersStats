@@ -9,13 +9,14 @@ package model;
 // --------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Imports
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Game {
     // Attributes
     private int games = 0;
     private final int gameNumber;
-    private final ArrayList<Player> players;
+    private final HashMap<String, Player> players;
 
     // -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -23,7 +24,7 @@ public class Game {
     public Game(int num, int numPlayers) {
         gameNumber = num;
         games++;
-        players = new ArrayList<>(numPlayers);
+        players = new HashMap<>();
         System.out.println("Game #" + num + " created with " + numPlayers + " players.");
     }
 
@@ -31,11 +32,11 @@ public class Game {
 
     // Methods
     // Setters
-    public void addPlayer(Player p) { players.add(p);}
+    public void addPlayer(Player p) { players.put(p.getName(), p);}
     public void setGameCount(int count) { games = count; }
 
     // Getters
-    public ArrayList<Player> getPlayers() { return players; }
+    public Map<String, Player> getPlayers() { return players; }
     public int getGameNumber() { return gameNumber; }
     public int getGameCount() { return games; }
 
@@ -43,7 +44,7 @@ public class Game {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Game #" + gameNumber + ":\n");
-        for (Player p : players) {
+        for (Player p : players.values()) {
             sb.append(p.toString()).append(" - ").append(p.getGameTotal()).append(" points\n");
         }
         return sb.toString();

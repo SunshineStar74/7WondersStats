@@ -12,6 +12,7 @@ package model;
 
 // Imports
 import java.util.ArrayList;
+import java.util.List;
 
 public class Player {
     // Attributes
@@ -149,7 +150,7 @@ public class Player {
 
     // Getters
     public String getName() { return name; }
-    public ArrayList<String> getNicknames() { return nicknames; }
+    public List<String> getNicknames() { return nicknames; }
     public int getnumberOfGames() { return numGames; }
     public int getWins() { return wins; }
     public int getTotalPoints (){return totalPoints;}
