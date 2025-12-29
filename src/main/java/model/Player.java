@@ -9,13 +9,15 @@
 package model;
 
 // Imports
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Player {
     // Attributes
+    // Identification
     private String name;
-    private ArrayList <String> nicknames;
+    //              Player's nickname(s), real name
+    private HashMap<String, String> names;
 
     // Statistics
     private int numGames;
@@ -40,8 +42,7 @@ public class Player {
     // Constructors
     // Default constructor
     public Player() {
-        name = "";
-        nicknames = new ArrayList<>();
+        names = new HashMap<>();
 
         numGames = 0;
         wins = 0;
@@ -63,7 +64,8 @@ public class Player {
     // Constructor with name only
     public Player(String n) {
         name = n;
-        nicknames = new ArrayList<>();
+        names = new HashMap<>();
+        names.put("default", n);
 
         numGames = 0;
         wins = 0;
@@ -85,7 +87,8 @@ public class Player {
     // Constructor with all score categories
     public Player(String n, int w, int c, int won, int civ, int com, int g, int s) {
         name = n;
-        nicknames = new ArrayList<>();
+        names = new HashMap<>();
+        names.put("default", n);
 
         numGames = 0;
         wins = 0;
@@ -108,9 +111,9 @@ public class Player {
     }
 
     // Constructor with nicknames and all score categories
-    public Player(String n, ArrayList<String> nNames, int w, int c, int won, int civ, int com, int g, int s) {
+    public Player(String n, Map<String, String> names, int w, int c, int won, int civ, int com, int g, int s) {
         name = n;
-        nicknames = nNames;
+        this.names = new HashMap<>(names);
 
         numGames = 0;
         wins = 0;
@@ -148,7 +151,7 @@ public class Player {
 
     // Getters
     public String getName() { return name; }
-    public List<String> getNicknames() { return nicknames; }
+    public Map<String, String> getNicknames() { return names; }
     public int getnumberOfGames() { return numGames; }
     public int getWins() { return wins; }
     public int getTotalPoints (){return totalPoints;}
@@ -157,9 +160,9 @@ public class Player {
     public int getGameTotal (){return gameTotal;}
 
     // Setters
-    public void addNickname(String nn) { nicknames.add(nn); }
+    public void addNickname(String nn) { names.put(nn, name); }
     public void changeName(String newName) { name = newName; }
-    public void setNicknames(ArrayList<String> n) { nicknames = n; }
+    public void setNicknames(Map<String, String> n) { names = (HashMap<String, String>) n; }
     public void setGameScores(int w, int c, int won, int civ, int com, int g, int s) {
         war = w;
         coins = c;
